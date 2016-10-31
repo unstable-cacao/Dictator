@@ -1,10 +1,24 @@
 <?php
-namespace Base;
+namespace Dictator\Base;
 
 
-interface IEventManager
+use Skeleton\ISingleton;
+
+
+/**
+ * @skeleton
+ */
+interface IEventManager extends ISingleton
 {
+	/**
+	 * @return IConfig
+	 */
 	public function config();
 	
-	public function baseEvent($UserID, $eventName);
+	/**
+	 * @param string $userID
+	 * @param string $eventName
+	 * @return bool
+	 */
+	public function baseEvent($userID, $eventName);
 }

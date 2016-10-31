@@ -1,9 +1,9 @@
 <?php
-namespace Object;
+namespace Dictator\Object;
 
 
-use Objection\LiteObject;
 use Objection\LiteSetup;
+use Objection\LiteObject;
 
 
 /**
@@ -23,7 +23,7 @@ class BaseEvent extends LiteObject
 		return [
 			'ID' 		=> LiteSetup::createInt(null),
 			'Created' 	=> LiteSetup::createDateTime(),
-			'Modified' 	=> LiteSetup::createInt(0),
+			'Modified' 	=> LiteSetup::createDateTime(),
 			'EventName' => LiteSetup::createString(null),
 			'UserID' 	=> LiteSetup::createInt(null)
 		];
@@ -35,6 +35,6 @@ class BaseEvent extends LiteObject
 		parent::__construct();
 		
 		$this->Created = new \DateTime();
-		$this->Modified = time();
+		$this->Modified = new \DateTime();
 	}
 }
