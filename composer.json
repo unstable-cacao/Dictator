@@ -1,0 +1,14 @@
+{
+    "name": "unstable-cacao/dictator",
+    "require": {
+        "oktopost/skeleton": "^1.0",
+        "oktopost/squid": "^1.0",
+        "oktopost/objection": "^1.0"
+    },
+    "authors": [
+        {
+            "name": "Marina Sherstuk",
+            "email": "marinashers@gmail.com"
+        }
+    ]
+}
