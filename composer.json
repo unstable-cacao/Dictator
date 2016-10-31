@@ -1,14 +1,36 @@
 {
     "name": "unstable-cacao/dictator",
+    "description": "Logging user activity.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/unstable-cacao/Dictator",
+    
     "require": {
+        "php" : ">=5.5-stable",
+        
         "oktopost/skeleton": "^1.0",
         "oktopost/squid": "^1.0",
         "oktopost/objection": "^1.0"
     },
+
+    "autoload": {
+        "psr-0": {
+            "Dictator": "src"
+        }
+    },
+
+    "minimum-stability": "stable",
+    
     "authors": [
         {
             "name": "Marina Sherstuk",
-            "email": "marinashers@gmail.com"
+            "email": "marinashers@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Alexey Puchkov",
+            "email": "alexey@oktopost.com",
+            "role": "Developer"
         }
     ]
 }

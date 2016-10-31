@@ -1,0 +1,146 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "f15c8bb20ff29d5457f2b546e5181d69",
+    "content-hash": "295ae45d367fa2d1acdebc419128174f",
+    "packages": [
+        {
+            "name": "oktopost/objection",
+            "version": "1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Oktopost/Objection.git",
+                "reference": "5843a4309566ee03514b5dfcf114bcfe2960ac88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Oktopost/Objection/zipball/5843a4309566ee03514b5dfcf114bcfe2960ac88",
+                "reference": "5843a4309566ee03514b5dfcf114bcfe2960ac88",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5-stable"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Objection": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexey Puchkov",
+                    "email": "alexey@oktopost.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Marina Sherstuk",
+                    "email": "marinashers@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Daniel Podrabinek",
+                    "email": "dpodrabinek@oktopost.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Objects in PHP",
+            "homepage": "https://github.com/Oktopost/Objection",
+            "time": "2016-10-18 13:38:25"
+        },
+        {
+            "name": "oktopost/skeleton",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Oktopost/Skeleton.git",
+                "reference": "b3a74a3b9649498d3a08d7f1d29d74d3f64bf26c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Oktopost/Skeleton/zipball/b3a74a3b9649498d3a08d7f1d29d74d3f64bf26c",
+                "reference": "b3a74a3b9649498d3a08d7f1d29d74d3f64bf26c",
+                "shasum": ""
+            },
+            "require": {
+                "oktopost/objection": "^1.0.0",
+                "php": ">=5.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Skeleton": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexey Puchkov",
+                    "email": "alexey@oktopost.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Inversion of Control library",
+            "homepage": "https://github.com/Oktopost/Skeleton",
+            "time": "2016-10-05 10:34:55"
+        },
+        {
+            "name": "oktopost/squid",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Oktopost/Squid.git",
+                "reference": "ec28f196397f951f8bc8bf0bc63c65000aa4a903"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Oktopost/Squid/zipball/ec28f196397f951f8bc8bf0bc63c65000aa4a903",
+                "reference": "ec28f196397f951f8bc8bf0bc63c65000aa4a903",
+                "shasum": ""
+            },
+            "require": {
+                "oktopost/objection": "^1.0.7",
+                "oktopost/skeleton": "^1.0.6",
+                "php": ">=5.5-stable"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Squid": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexey Puchkov",
+                    "email": "alexey@oktopost.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "MySQL library build on top of PDO",
+            "homepage": "https://github.com/Oktopost/Squid",
+            "time": "2016-10-31 06:50:48"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
