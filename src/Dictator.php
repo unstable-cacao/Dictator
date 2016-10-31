@@ -14,4 +14,9 @@ class Dictator
 	{
 		// TODO
 	}
+	
+	public static function getEventManager()
+	{
+		return self::skeleton(\Dictator\Base\IEventManager::class);
+	}
 }
