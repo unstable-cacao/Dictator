@@ -35,11 +35,13 @@ class EventManager implements IEventManager
 	 */
 	public function baseEvent($userID, $eventName)
 	{
-		// TODO: Create BaseEvent and give normal name to object.
-		$o = new BaseEvent();
+		$event = new BaseEvent();
+		$event->EventName = $eventName;
+		$event->UserID = $userID;
 		
 		/** @var IBaseEventDAO $dao */
 		$dao = \Dictator::skeleton(IBaseEventDAO::class);
-		$dao->insertBaseEvent($o);
+		
+		return $dao->insertBaseEvent($event);
 	}
 }
