@@ -41,6 +41,7 @@ class EventManager implements IEventManager
 		
 		/** @var IBaseEventDAO $dao */
 		$dao = \Dictator::skeleton(IBaseEventDAO::class);
+		$dao->setConnection($this->config()->getConnection());
 		
 		return $dao->insertBaseEvent($event);
 	}

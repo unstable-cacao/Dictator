@@ -3,6 +3,7 @@ namespace Dictator\Base\DAO;
 
 
 use Dictator\Object\BaseEvent;
+use Squid\MySql\IMySqlConnector;
 
 
 /**
@@ -11,4 +12,6 @@ use Dictator\Object\BaseEvent;
 interface IBaseEventDAO
 {
 	public function insertBaseEvent(BaseEvent $baseEvent);
+	
+	public function setConnection(IMySqlConnector $connector);
 }

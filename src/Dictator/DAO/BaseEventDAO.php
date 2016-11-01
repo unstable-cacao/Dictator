@@ -16,7 +16,7 @@ class BaseEventDAO implements IBaseEventDAO
 	private $connector;
 	
 	
-	public function __construct(IMySqlConnector $connector)
+	public function setConnection(IMySqlConnector $connector)
 	{
 		$this->connector = $connector;
 		
@@ -25,9 +25,8 @@ class BaseEventDAO implements IBaseEventDAO
 			->setConnector($this->connector)
 			->setDomain(BaseEvent::class)
 			->setTable('BaseEvent')
-			->setIdField('id');
+			->setIdField('ID');
 	}
-	
 	
 	public function insertBaseEvent(BaseEvent $baseEvent)
 	{
