@@ -21,4 +21,12 @@ interface IEventManager extends ISingleton
 	 * @return bool
 	 */
 	public function baseEvent($userID, $eventName);
+	
+	/**
+	 * @param string $userID
+	 * @param string $eventName
+	 * @param array $parameters
+	 * @return bool
+	 */
+	public function parameterizedEvent($userID, $eventName, array $parameters);
 }

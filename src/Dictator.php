@@ -39,6 +39,9 @@ class Dictator
 		return self::$skeleton;
 	}
 	
+	/**
+	 * @return mixed|Skeleton
+	 */
 	public static function getEventManager()
 	{
 		return self::skeleton(\Dictator\Base\IEventManager::class);

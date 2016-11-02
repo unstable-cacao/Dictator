@@ -11,7 +11,14 @@ use Squid\MySql\IMySqlConnector;
  */
 interface IBaseEventDAO
 {
+	/**
+	 * @param BaseEvent $baseEvent
+	 * @return bool
+	 */
 	public function insertBaseEvent(BaseEvent $baseEvent);
 	
+	/**
+	 * @param IMySqlConnector $connector
+	 */
 	public function setConnection(IMySqlConnector $connector);
 }

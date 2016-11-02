@@ -16,6 +16,9 @@ class BaseEventDAO implements IBaseEventDAO
 	private $connector;
 	
 	
+	/**
+	 * @param IMySqlConnector $connector
+	 */
 	public function setConnection(IMySqlConnector $connector)
 	{
 		$this->connector = $connector;
@@ -28,6 +31,10 @@ class BaseEventDAO implements IBaseEventDAO
 			->setIdField('ID');
 	}
 	
+	/**
+	 * @param BaseEvent $baseEvent
+	 * @return bool
+	 */
 	public function insertBaseEvent(BaseEvent $baseEvent)
 	{
 		return $this->objectConnector->save($baseEvent);

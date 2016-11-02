@@ -11,7 +11,7 @@ use Objection\LiteObject;
  * @property \DateTime	$Created
  * @property int		$Modified
  * @property string		$EventName
- * @property int		$UserID
+ * @property string		$UserID
  */
 class BaseEvent extends LiteObject
 {
@@ -25,7 +25,7 @@ class BaseEvent extends LiteObject
 			'Created' 	=> LiteSetup::createDateTime(),
 			'Modified' 	=> LiteSetup::createDateTime(),
 			'EventName' => LiteSetup::createString(null),
-			'UserID' 	=> LiteSetup::createInt(null)
+			'UserID' 	=> LiteSetup::createString(null)
 		];
 	}
 	
