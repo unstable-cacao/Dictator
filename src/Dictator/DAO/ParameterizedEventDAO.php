@@ -50,7 +50,8 @@ class ParameterizedEventDAO implements IParameterizedEventDAO
 	{
 		$insert = $this->connector->insert()->into('Parameters', ['EventID', 'ParamName', 'ParamValue']);
 		
-		foreach ($parameters as $paramName => $paramValue) {
+		foreach ($parameters as $paramName => $paramValue)
+		{
 			$insert->values([$eventID, $paramName, $paramValue]);
 		}
 		

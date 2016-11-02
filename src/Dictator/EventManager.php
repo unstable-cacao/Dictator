@@ -58,7 +58,7 @@ class EventManager implements IEventManager
 	{
 		$event = new ParameterizedEvent();
 		$event->EventName = $eventName;
-		$event->ID = $userID;
+		$event->UserID = $userID;
 		$event->ParamsCount = count($parameters);
 		
 		/** @var IParameterizedEventDAO $dao */
