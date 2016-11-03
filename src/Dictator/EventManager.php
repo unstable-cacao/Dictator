@@ -3,10 +3,12 @@ namespace Dictator;
 
 
 use Dictator\Base\DAO\IBaseEventDAO;
+use Dictator\Base\DAO\IEntityEventDAO;
 use Dictator\Base\DAO\IParameterizedEventDAO;
 use Dictator\Base\IConfig;
 use Dictator\Base\IEventManager;
 use Dictator\Object\BaseEvent;
+use Dictator\Object\EntityEvent;
 use Dictator\Object\ParameterizedEvent;
 
 
@@ -66,5 +68,26 @@ class EventManager implements IEventManager
 		$dao->setConnection($this->config()->getConnection());
 		
 		return $dao->insertParameterizedEvent($event, $parameters);
+	}
+	
+	/**
+	 * @param string $userID
+	 * @param string $entityName
+	 * @param string $actionType
+	 * @param array $parameters
+	 * @return bool
+	 */
+	public function entityEvent($userID, $entityName, $actionType, array $parameters)
+	{
+		$event = new EntityEvent();
+		$event->UserID = $userID;
+		$event->EntityName = $entityName;
+		$event->ActionType = $actionType;
+		
+		/** @var IEntityEventDAO $dao */
+		$dao = \Dictator::skeleton(IEntityEventDAO::class);
+		$dao->setConnection($this->config()->getConnection());
+		
+		return $dao->insertEntityEvent($event, $parameters);
 	}
 }
