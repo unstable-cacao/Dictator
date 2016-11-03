@@ -28,6 +28,7 @@ class EntityEventDAO implements IEntityEventDAO
 			->setConnector($this->connector)
 			->setDomain(EntityEvent::class)
 			->setTable('EntityEvent')
+			->addIgnoreFields(['Created', 'Modified'])
 			->setIdField('ID');
 	}
 	
