@@ -38,6 +38,6 @@ class EntityEvent extends LiteObject
 		parent::__construct();
 		
 		$this->Created = new \DateTime();
-		$this->Modified = new \DateTime();
+		$this->Modified = time();
 	}
 }

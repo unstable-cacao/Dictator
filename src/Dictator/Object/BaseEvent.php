@@ -23,7 +23,7 @@ class BaseEvent extends LiteObject
 		return [
 			'ID' 		=> LiteSetup::createInt(null),
 			'Created' 	=> LiteSetup::createDateTime(),
-			'Modified' 	=> LiteSetup::createDateTime(),
+			'Modified' 	=> LiteSetup::createInt(0),
 			'EventName' => LiteSetup::createString(null),
 			'UserID' 	=> LiteSetup::createString(null)
 		];
@@ -35,6 +35,6 @@ class BaseEvent extends LiteObject
 		parent::__construct();
 		
 		$this->Created = new \DateTime();
-		$this->Modified = new \DateTime();
+		$this->Modified = time();
 	}
 }

@@ -48,7 +48,7 @@ class EntityEventDAO implements IEntityEventDAO
 	 */
 	public function insertParameters($eventID, array $parameters)
 	{
-		$insert = $this->connector->insert()->into('Parameters', ['EventID', 'ParamName', 'ParamValue']);
+		$insert = $this->connector->insert()->into('EntityParameters', ['EventID', 'ParamName', 'ParamValue']);
 		
 		foreach ($parameters as $paramName => $paramValue)
 		{
